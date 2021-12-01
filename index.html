@@ -12,13 +12,18 @@
 <body>
     <div class ="scene">
     <div class="moon">
-        <img src="cloud1.png" class="cloud1">
-        <img src="cloud3.png" class="cloud3">
+        <img src="cloud1.png" class="cloud1" alt="clouds">
+        <img src="cloud2.png" class="cloud2" alt="clouds">
+        <img src="cloud1.png" class="cloud3" alt="clouds">
+        <img src="cloud2.png" class="cloud4"alt="clouds">
+        <img src="cloud1.png" class="cloud5"alt="clouds">
+        <img src="cloud2.png" class="cloud6"alt="clouds">
+
     </div>
     <!--Note: The type attribute identifies the content between the <script> and </script> tags. -->
     <script type="text/javascript">
     function stars(){
-        let count = 500;
+        let count = 1000;
         let scene = document.querySelector(".scene");
         let i = 0;
         while(i < count){
@@ -26,14 +31,17 @@
             let x = Math.floor(Math.random() * window.innerWidth);
             let y = Math.floor(Math.random() * window.innerHeight);
             let duration = Math.random() * 10;
-            let size = Math.random() * 2.5;
+            let size = Math.random() * 4;
+            let randomColor = "#" + Math.floor(Math.random() *16777215).toString(16);
+
 
             star.style.left = x + "px";
             star.style.top = y + "px";
-            star.style.width = 2 + size + "px";
-            star.style.height = 2 + size + "px";
+            star.style.width = 1 + size + "px";
+            star.style.height = 1 + size + "px";
+            star.style.background = randomColor;
 
-            star.style.animationDuration = 21 +duration + "s";
+            star.style.animationDuration = 10 + duration + "s";
             star.style.animationDelay = duration + "s";
 
             scene.appendChild(star);
