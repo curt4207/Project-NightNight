@@ -13,53 +13,90 @@ body{
 }
 .moon{
     position: absolute;
-    top: 100px;
-    left: 120px;
-    width: 160px;
-    height: 160px;
+    top: 160px;
+    left: 200px;
+    width: 12vw;
+    height: 12vw;
     background: rgb(228, 216, 216);
     border-radius: 50%;
-    z-index: 1000;
-    /* z-index: auto; Try It */
+    z-index: 5;
     box-shadow:
-    0 0 60px 30px #fff,
-    0 0 100px 60px #f0f,
-    0 0 140px 90px #0ff;
+    0 0 100px 30px #fff,
+    0 0 50px 60px #f0f,
+    0 0 80px 90px #0ff;
 }
 .moon::after{
     content: "";
     position: absolute;
     top: 1%;
     left: 25%;/*moves the dark crescent on of of the moon, maybe add movement. */
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
+    z-index: 6;
     border-radius: 50%;
-    background: linear-gradient(black, #243bc3);
+    background: linear-gradient(rgba(68, 14, 47, 0.925), #243cc3f5);
     background-attachment: fixed;
+   
 }
 .cloud1{
     position: absolute;
-    top: -70px;
-    left: 0;
-    max-width: 300px;
-    z-index: 10000;
-    animation: animateCloud 80s linear infinite;
+    top: -8vh;
+    left: 9vw;
+    max-width: 20vw;
+    z-index: 20;
+    animation: animateCloud 180s linear infinite;
+    
     
 }
-.cloud3{
+.cloud2{
     position: absolute;
-    top: 160px;
-    left: 0;
-    max-width: 400px;
-    z-index: 10000;
-    animation: animateCloud 90s linear infinite;
-    
+    top: 0vh;
+    left: -10vw;
+    max-width: 45vw;
+    max-height: 45vw;
+    z-index: 25;
+    animation: animateCloud 225s linear infinite;
 }
+ .cloud3{
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    max-width: 300px;
+    z-index: 25;
+    animation: animateCloud 140s linear infinite;
+}
+.cloud4{
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+    max-width: 380px;
+    z-index: 25;
+    animation: animateCloud 260s linear infinite;
+}
+.cloud5{
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+    max-width: 420px;
+    z-index: 25;
+    animation: animateCloud 190s linear infinite;   
+} 
+.cloud6{
+    position: absolute;
+    top: 16vh;
+    left: 40vw;
+    max-width: 360px;
+    z-index: 25;
+    animation: animateCloud 230s linear infinite;
+}
+
 @keyframes animateCloud{
     0%{
         transform: translateX(-100%) scale(1);
+        transition:ease-in-out;
     }100%{
         transform: translateX(400%) scale(1.5);
+        transition:ease-in-out;
     }
 }
 
@@ -67,18 +104,18 @@ body{
     position: absolute;
     background: whitesmoke;
     border-radius: 50%;
-    animation: animate 23s linear infinite;
+    animation: animate 5s linear infinite;
 }
 @keyframes animate{
     0%{
         opacity: 0;
-        transform: translate(0);
+        transform: translate(0px);
     }
-    10%,90%{
+    5%, 100%{
         opacity: 1;
     }
-    100%{
+    10%, 60%{
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(13px);
     }
 }
