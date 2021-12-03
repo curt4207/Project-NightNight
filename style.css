@@ -17,9 +17,9 @@ body{
     left: 200px;
     width: 12vw;
     height: 12vw;
-    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255, 0, 0, 0.192) 70.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.616), rgba(0, 255, 0, 0.432) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0, 0, 255, 0.582) 70.71%);
     border-radius: 50%;
     z-index: 5;
     box-shadow:inset 0 0 6px,
@@ -45,12 +45,12 @@ body{
 .cloud1{
     position: absolute;
     top: -8vh;
-    left: 5vw;
+    left: -5vw;
     max-width: 10vw;
     max-height: 10vw;
     z-index: 10;
-    animation: animateCloud 50s linear infinite;
-    /* animation poping out and in */
+    animation: animateCloud 80s linear infinite;
+    /* animation popping in and out before the edge.  */
     
 }
 .cloud2{
@@ -102,7 +102,7 @@ body{
 
 @keyframes animateCloud{
     0%{
-        transform: translateX(-100%) scale(1);
+        transform: translateX(-200%) scale(1);
     }100%{
         transform: translateX(400%) scale(1.5);    
     }
